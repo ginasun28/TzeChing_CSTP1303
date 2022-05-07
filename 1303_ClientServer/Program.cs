@@ -7,6 +7,7 @@ namespace _1303_ClientServer
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Ha Ha!!");
         }
     }
 }
