@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Threading;
 
 namespace _1303_ClientServer
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Assignment1 a1 = new Assignment1();
+            a1.Run();
         }
     }
 }
