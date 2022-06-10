@@ -8,10 +8,10 @@ namespace _1303_ClientServer
     {
         static void Main(string[] args)
         {
-            Assignment1 a1 = new Assignment1();
-            a1.Run();
+            /*Assignment1 a1 = new Assignment1();
+            a1.Run();*/
 
-            Assignment2 a2 = new Assignment2();
+            Assignment02 a2 = new Assignment02();
             a2.Run();
         }
     }

@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace _1303_ClientServer.Section1
 {
-    class Assignment2 : AssignmentBase
+    class Assignment02 : AssignmentBase
     {
         public void runThreads()
         {
@@ -22,7 +22,7 @@ namespace _1303_ClientServer.Section1
         {
             for (int j = 0; j < 101; j++)
             {
-                Console.Write('a');
+                Console.Write('c');
                 Thread.Yield();
             }
             Console.WriteLine("\n");
@@ -31,7 +31,7 @@ namespace _1303_ClientServer.Section1
         {
             for (int j = 0; j < 101; j++)
             {
-                Console.Write('a');
+                Console.Write('c');
                 Thread.Yield();
             }
             Console.WriteLine("\n");
@@ -41,7 +41,7 @@ namespace _1303_ClientServer.Section1
         {
             for (int j = 0; j < 101; j++)
             {
-                Console.Write('a');
+                Console.Write('c');
                 Thread.Yield();
             }
             Console.WriteLine("\n");
@@ -50,7 +50,7 @@ namespace _1303_ClientServer.Section1
         {
             for (int j = 0; j < 101; j++)
             {
-                Console.Write('a');
+                Console.Write('c');
                 Thread.Yield();
             }
             Console.WriteLine("\n");
@@ -59,7 +59,7 @@ namespace _1303_ClientServer.Section1
         {
             for (int j = 0; j < 101; j++)
             {
-                Console.Write('a');
+                Console.Write('c');
                 Thread.Yield();
             }
             Console.WriteLine("\n");

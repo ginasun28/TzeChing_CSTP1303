@@ -1,0 +1,12 @@
+﻿Assignment02-Part 2 (Design a Guess the Word game which will be implemented later as  a client server application)				
+						
+Come up with a communication protocol client and server to do the following:
+
+Create a list of 5 words. The user will not see them, the word will random when game start.
+Server should be able to random of 5 words for the client.						
+Clients gets to make 3 guesses for the server E.g. "You have 3 chances to guess the word." for the server.
+When clients guessed wrong word, the server will send message E.g "Your guess is not correct, you have 2 chances!"
+Clients can continue to guess the word.
+If clients guessed 3 times, the answer is incorrect then the server will send message E.g. "You are lost the game." 
+If clients guessed correct word, the server will send message E.g "You are win!"
+The game will be stop when the client lost or win the game.
