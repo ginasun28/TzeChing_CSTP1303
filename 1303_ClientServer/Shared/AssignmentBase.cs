@@ -8,6 +8,7 @@ namespace _1303_ClientServer.Shared
     {
         protected virtual void Execute()
         {
+
         }
 
         public void Run()
