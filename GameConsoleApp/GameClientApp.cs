@@ -10,41 +10,40 @@ namespace GameConsoleApp
 
         static void Main(string[] args)
         {
+            Greeting();
+            /*var app = new GameClientApp();
+            Random number = new Random();
+            int randomNum = number.Next(0, 5);
+            app.ProcessGame(randomNum);*/
+
+        }
+
+        public static void Greeting()
+        {
+            string name;
+            Console.WriteLine("Welcome to the Word Guess Game!  Would you like to play now?");
+            Console.WriteLine("Enter your name: ");
+            name = Console.ReadLine();
+            Console.WriteLine("What's up {0}! Let's play!", name);
             var app = new GameClientApp();
-            var number = app.GetIntegerFromConsole("Pick a number from 1 to 5:");
-            
-            app.ProcessGame(number);
+            Random number = new Random();
+            int randomNum = number.Next(0, 5);
+            app.ProcessGame(randomNum);
         }
 
-        private int GetIntegerFromConsole(string message)
+        private void ProcessGame(int randomNum)
         {
-            Console.WriteLine(message);
-            string msg = Console.ReadLine();
-            bool success = int.TryParse(msg, out var result) ;
-            if(success)
-            {
-                return result;
-            }
-            else
-            {
-                Console.WriteLine("Your input is not integer." + message);
-            }
-            // TODO: add error handling for invalid user input
-            var command = int.Parse(msg);
-            return command;
-        }
-
-        private void ProcessGame(int command)
-        {
-            var response = this.gameLogicManager.InitializeGame(command);
-            Console.WriteLine("initial Game response from server: {0}", response);
+            Console.WriteLine("Game Start");
+            Console.WriteLine("You have 3 chances to guess a word\n");
+            var response = this.gameLogicManager.InitializeGame(randomNum);
+            // Console.WriteLine($"Initial Game response from server: {response}");
 
             while (response != Constant.GameEnded && response != Constant.GameWinner)
             {
-                Console.WriteLine("Take a guess:");
+                Console.WriteLine("Guess a word:");
                 var guess = Console.ReadLine();
-                response = this.gameLogicManager.SendGuess(guess);
-                Console.WriteLine("Server response: {0}", response);
+                response = this.gameLogicManager.SendGuess(guess).ToLower();
+                Console.WriteLine($"Server response: {response}");
             }
 
             this.gameLogicManager.Dispose();

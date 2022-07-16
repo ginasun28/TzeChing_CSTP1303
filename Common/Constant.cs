@@ -28,10 +28,10 @@ namespace Common
 
         // Server Response Codes 
         public const string HelloCommand = "HelloFromClient";
-        public const string GameEnded = "x";
-        public const string GameWinner = "$";
-        public const string GameStarted = "*";
-        public const string GameServerError1 = "!";
-        public const string GuessAgain = "c";
+        public const string GameEnded = "Game End";
+        public const string GameWinner = "You Win!!";
+        public const string GameStarted = "Game Start";
+        public const string GameServerError1 = "Error!";
+        public const string GuessAgain = "Keep guessing";
     }
 }

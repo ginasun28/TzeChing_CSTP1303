@@ -6,7 +6,7 @@
     public class GameLogicManager
     {
         private const int serverPort = 60007;
-        private const int maxNumberOfGuesses = 5;
+        private const int maxNumberOfGuesses = 3;
         private int numberOfGuesses;
         private GameTcpClient gameTcpClient;
 
@@ -24,13 +24,22 @@
 
         public string SendGuess(string guess)
         {
-            var response = this.gameTcpClient.SendRequest(guess);
+            var response = this.gameTcpClient.SendRequest(guess.ToLower());
             numberOfGuesses++;
             if (numberOfGuesses >= maxNumberOfGuesses)
             {
                 return Constant.GameEndedMessage;
             }
+            else
+            {
+                if (guess != response)
+                {
+                    int chances = maxNumberOfGuesses - numberOfGuesses;
+                    return $"You have {chances} chances to guess the word.";
+                }
 
+
+            }
             return response;
         }
 

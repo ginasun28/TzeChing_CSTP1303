@@ -23,25 +23,21 @@ namespace TcpServer
 
         private string InitializeGame(string request)
         {
-            this.numberPicked = Convert.ToInt32(request);
+            this.numberPicked = int.Parse(request);
             if (this.numberPicked <= 0 || numberPicked > 10)
             {
-                return "Error!";
-                /*return Constant.GameServerError1 + "Error!";*/
+                return Constant.GameServerError1;
             }
-            return "The game is start!";
-            /*return Constant.GameStarted + "The game is start!";*/
+            return Constant.GameStarted;
         }
 
         private string CompareGuess(string request)
         {
             if (request == GameData.Words[this.numberPicked - 1])
             {
-                /*return Constant.GameWinner;*/
-                return "You Win!!";
+                return Constant.GameWinner;
             }
-            return "Keep guessing";
-            /*return Constant.GuessAgain;*/
+            return Constant.GuessAgain;
         }
     }
 }
