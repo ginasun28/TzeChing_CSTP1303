@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameManager", "GameManager\GameManager.csproj", "{BB316134-2682-4E6A-B494-F15968866E65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{CED8AF18-8CB1-4EAF-A766-7D4E3AAFC2BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameClientConsoleApp", "GameConsoleApp\GameClientConsoleApp.csproj", "{7038C801-3335-4A1F-ACB5-CC5EB42AE0C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpClient", "TcpClient\TcpClient.csproj", "{44CDAC39-FD5E-4E81-87E9-B4E5326024BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpServer", "TcpServer\TcpServer.csproj", "{E8D228A1-C808-4C24-AAA4-AF02513219CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project-GuessWordGame", "Project-GuessWordGame", "{2209CBDB-E0B7-4C9E-BE33-C9339B4419E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB316134-2682-4E6A-B494-F15968866E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB316134-2682-4E6A-B494-F15968866E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB316134-2682-4E6A-B494-F15968866E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB316134-2682-4E6A-B494-F15968866E65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED8AF18-8CB1-4EAF-A766-7D4E3AAFC2BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED8AF18-8CB1-4EAF-A766-7D4E3AAFC2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED8AF18-8CB1-4EAF-A766-7D4E3AAFC2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED8AF18-8CB1-4EAF-A766-7D4E3AAFC2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7038C801-3335-4A1F-ACB5-CC5EB42AE0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7038C801-3335-4A1F-ACB5-CC5EB42AE0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7038C801-3335-4A1F-ACB5-CC5EB42AE0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7038C801-3335-4A1F-ACB5-CC5EB42AE0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44CDAC39-FD5E-4E81-87E9-B4E5326024BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CDAC39-FD5E-4E81-87E9-B4E5326024BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44CDAC39-FD5E-4E81-87E9-B4E5326024BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44CDAC39-FD5E-4E81-87E9-B4E5326024BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D228A1-C808-4C24-AAA4-AF02513219CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D228A1-C808-4C24-AAA4-AF02513219CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D228A1-C808-4C24-AAA4-AF02513219CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D228A1-C808-4C24-AAA4-AF02513219CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB316134-2682-4E6A-B494-F15968866E65} = {2209CBDB-E0B7-4C9E-BE33-C9339B4419E3}
+		{CED8AF18-8CB1-4EAF-A766-7D4E3AAFC2BD} = {2209CBDB-E0B7-4C9E-BE33-C9339B4419E3}
+		{7038C801-3335-4A1F-ACB5-CC5EB42AE0C3} = {2209CBDB-E0B7-4C9E-BE33-C9339B4419E3}
+		{44CDAC39-FD5E-4E81-87E9-B4E5326024BA} = {2209CBDB-E0B7-4C9E-BE33-C9339B4419E3}
+		{E8D228A1-C808-4C24-AAA4-AF02513219CA} = {2209CBDB-E0B7-4C9E-BE33-C9339B4419E3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {326BAE7F-7EF6-4868-ABE2-6340F36FB5AA}
+	EndGlobalSection
+EndGlobal
