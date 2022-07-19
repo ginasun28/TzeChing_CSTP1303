@@ -39,7 +39,7 @@ namespace TcpGameClient
                 bytesRecieved = networkStream.Read(messageRecieved, 0, 1);
 
                 messageReturnedFromServer = Encoding.ASCII.GetString(messageRecieved);
-                this.logger.Log(Constant.ReceivedTemplate, messageRecieved.Length, messageReturnedFromServer);
+                // this.logger.Log(Constant.ReceivedTemplate, messageRecieved.Length, messageReturnedFromServer);
             }
             catch(Exception e)
             {

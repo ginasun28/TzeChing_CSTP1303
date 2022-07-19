@@ -25,6 +25,8 @@ namespace GameConsoleApp
             Console.WriteLine("Enter your name: ");
             name = Console.ReadLine();
             Console.WriteLine("What's up {0}! Let's play!", name);
+            Console.WriteLine("Waiting Game Start......");
+
             var app = new GameClientApp();
             Random number = new Random();
             int randomNum = number.Next(0, 5);
@@ -38,13 +40,26 @@ namespace GameConsoleApp
             var response = this.gameLogicManager.InitializeGame(randomNum);
             // Console.WriteLine($"Initial Game response from server: {response}");
 
-            while (response != Constant.GameEnded && response != Constant.GameWinner)
+            while (!(response.Equals( Constant.GameEndedMessage) || response.Equals( Constant.GameWinner)))
             {
                 Console.WriteLine("Guess a word:");
                 var guess = Console.ReadLine();
-                response = this.gameLogicManager.SendGuess(guess).ToLower();
-                Console.WriteLine($"Server response: {response}");
+                response = this.gameLogicManager.SendGuess(guess);
+                if (response.Equals(Constant.GameEndedMessage))
+                {
+                    Console.WriteLine($"Server response: Game Over");
+                }
+                else if (response.Equals(Constant.GameWinner))
+                {
+                    Console.WriteLine($"Server response: You Won");
+                }
+                else
+                {
+                    Console.WriteLine($"Server response: {response.ToLower()}");
+                }
             }
+
+
 
             this.gameLogicManager.Dispose();
         }

@@ -24,7 +24,7 @@ namespace TcpServer
         private string InitializeGame(string request)
         {
             this.numberPicked = int.Parse(request);
-            if (this.numberPicked <= 0 || numberPicked > 10)
+            if (this.numberPicked < 0 || numberPicked > 4)
             {
                 return Constant.GameServerError1;
             }
@@ -33,7 +33,7 @@ namespace TcpServer
 
         private string CompareGuess(string request)
         {
-            if (request == GameData.Words[this.numberPicked - 1])
+            if (request.Equals(GameData.Words[this.numberPicked]))
             {
                 return Constant.GameWinner;
             }

@@ -25,22 +25,17 @@
         public string SendGuess(string guess)
         {
             var response = this.gameTcpClient.SendRequest(guess.ToLower());
+            if (response.Equals(Constant.GameWinner))
+            {
+                return response;
+            }
             numberOfGuesses++;
             if (numberOfGuesses >= maxNumberOfGuesses)
             {
                 return Constant.GameEndedMessage;
             }
-            else
-            {
-                if (guess != response)
-                {
-                    int chances = maxNumberOfGuesses - numberOfGuesses;
-                    return $"You have {chances} chances to guess the word.";
-                }
-
-
-            }
-            return response;
+            int chances = maxNumberOfGuesses - numberOfGuesses;
+            return $"You have {chances} chances to guess the word.";
         }
 
         public void Dispose()

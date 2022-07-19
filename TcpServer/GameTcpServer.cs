@@ -65,8 +65,8 @@ namespace TcpServer
                         this.logger.Log(Constant.ReceivedTemplate, bytesRecieved, receivedMessage);
                         
                         var response = this.gameProcessor.Process(receivedMessage.Substring(0, bytesRecieved));
-                        var bytesToSend = Encoding.ASCII.GetBytes(response); 
-
+                        var bytesToSend = Encoding.ASCII.GetBytes(response);
+                        // Console.WriteLine(bytesToSend[0]);
                         networkStream.Write(bytesToSend, 0, response.Length);
                         totalBytesRecieved += bytesRecieved;
                     }
